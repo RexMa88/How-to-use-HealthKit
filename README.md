@@ -10,6 +10,7 @@ And then,You need initialize HKHealthStore,that can help you save your health da
 Later,We need a authorized.
 As you see,if you wanna save your data,you need authorized wheather iOS can 'read' or 'write' your health data.
 
+
 [self.healthStore requestAuthorizationToShareTypes:writeDataTypes readTypes:readDataTypes completion:^(BOOL success, NSError *error) {
                 if (!success) {
                     CLog(@"You didn't allow HealthKit to access these read/write data types. In your app, try to handle this error gracefully when a user decides not to provide access. The error was: %@. If you're using a simulator, try it on a device.", error);
